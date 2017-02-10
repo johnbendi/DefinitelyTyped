@@ -119,6 +119,19 @@ interface Auth0LockShowOptions {
     rememberLastLogin?: boolean;
 }
 
+interface Auth0Error {
+    error: string;
+    error_description: string;
+}
+
+interface Auth0UserProfile {
+    name?: string;
+    email?: string;
+    nickname?: string;
+    created_at: Date;
+    updated_at: Date;
+}
+
 interface Auth0LockStatic {
     new (clientId: string, domain: string, options?: Auth0LockConstructorOptions): Auth0LockStatic;
 
